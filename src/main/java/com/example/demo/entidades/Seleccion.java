@@ -1,7 +1,14 @@
 package com.example.demo.entidades;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,12 +20,18 @@ import lombok.NoArgsConstructor;
 public class Seleccion {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int id;
+	
 	private String nombre;
-	private char grupo;
 	
+	@ManyToOne
+	@JoinColumn(name = "id")
+	private Continente continente;
 	
+	private String grupo;
 	
-	private Continente continente_id;
+	@OneToMany(mappedBy = "selecion_id")
+	private List<Resultado> resultados;
 
 }

@@ -26,12 +26,12 @@ public class Seleccion {
 	private String nombre;
 	
 	@ManyToOne
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "continente_id")
 	private Continente continente;
 	
 	private String grupo;
 	
-	@OneToMany(mappedBy = "seleccion_id")
+	@OneToMany(mappedBy = "seleccion")
 	private List<Resultado> resultados;
 
 }

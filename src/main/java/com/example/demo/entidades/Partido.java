@@ -24,10 +24,10 @@ public class Partido {
 	private Date fecha;
 	
 	@ManyToOne
-	@JoinColumn(name = "id")
-	private Estadio estadio_id;
+	@JoinColumn(name = "estadio_id")
+	private Estadio estadio;
 	
-	@OneToMany(mappedBy = "partido_id")
+	@OneToMany(mappedBy = "partido")
 	private List<Resultado> resultados;
 	
 }

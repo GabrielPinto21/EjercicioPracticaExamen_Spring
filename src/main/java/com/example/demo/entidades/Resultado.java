@@ -22,11 +22,11 @@ public class Resultado {
 	private int id;
 	
 	@OneToOne
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "partido_id")
 	private Partido partido;
 	
 	@ManyToOne
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "seleccion_id")
 	private Seleccion seleccion;
 	
 	private int goles;

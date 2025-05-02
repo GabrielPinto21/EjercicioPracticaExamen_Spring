@@ -26,7 +26,7 @@ public class Estadio {
 	private String nombre;
 	private int capacidad;
 	
-	@OneToMany(mappedBy = "estadio_id")
+	@OneToMany(mappedBy = "estadio")
 	private List<Partido> partidos;
 	
 }

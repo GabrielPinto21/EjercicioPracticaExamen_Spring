@@ -31,7 +31,7 @@ public class Seleccion {
 	
 	private String grupo;
 	
-	@OneToMany(mappedBy = "selecion_id")
+	@OneToMany(mappedBy = "seleccion_id")
 	private List<Resultado> resultados;
 
 }

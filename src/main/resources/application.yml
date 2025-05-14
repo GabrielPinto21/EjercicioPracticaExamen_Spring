@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: EjercicioPracticaExamen
+  datasource:
+    url: jdbc:postgresql://localhost:5432/preprevio
+    username: postgres
+    password: Ronaldo21
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /docs/swagger-ui.html
